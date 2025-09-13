@@ -1,0 +1,128 @@
+.form-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000; /* Black background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: #1c1c1c; /* Dark gray */
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  border: 2px solid #444; /* Medium gray border */
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 0 2px #666;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #ddd;
+}
+
+.toggle-form {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.toggle-form p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.toggle-form button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ✅ Responsive: Mobile Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .form-container {
+    padding: 15px;
+    max-width: 60%;
+    height: 95%;
+    font-size: 10px;
+  }
+
+  .form-group input {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+  .form-group label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  .toggle-form {
+    margin-top: 10px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .toggle-form p {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+}

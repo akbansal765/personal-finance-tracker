@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('./signup_login.css');
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.app_component{
+    background-color: rgba(235, 232, 232, 0.829);
+    height: 100vh;
+}
+.app{
+  height: 90vh;
+  width: 35%;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+/* ////////////////////// Navbar Component /////////////////// */
+.navbar_component{
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  z-index: 0;
+  background-color: rgba(201, 201, 201, 0);
+}
+.list_content{
+  display: flex;
+  padding: 1%;
+  list-style: none;
+}
+.list_content li{
+  margin-left: 2%;
+}
+.list_content li a{
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(110, 109, 109);
+}
+.list_content li a:hover{
+  background-color: white;
+  color: black;
+}
+.logout_button{
+  color: rgb(43, 43, 212) !important;
+}
+
+/* //////////////////////  Header Componenet //////////////////// */
+.header{
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* /////////////////////// Your Balance Component /////////////// */
+.header_component{
+  width: 85%;
+  margin: auto;
+}
+
+.balance_header{
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.balance{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+/* //////////////////// Income Expense componenet /////////////////////// */
+.Income_Expense_comp{
+  width: 85%;
+  margin: auto;
+  height: 13%;
+  margin-top: 5%;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 3px 0.5px rgb(141, 140, 140);
+}
+.box{
+  height: 60%;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.box p:first-child{
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.box p:last-child{
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.income_box p:last-child{
+  color: rgb(57, 199, 57);
+}
+.expense_box p:last-child{
+  color: rgb(238, 63, 63);
+}
+.income_box{
+  border-right: solid 2px rgba(231, 226, 226, 0.87);
+}
+.edit_income_button{
+  position: absolute;
+  height: 2.5vw;
+  width: 2.5vw;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: transparent;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: rgba(1, 60, 83, 0) solid 2px;
+}
+.edit_income_button > img{
+  height: 65%;
+}
+.edit_income_button:hover{
+  transform: scale(1.1);
+}
+.edit_income_button:active{
+  background-color: rgb(1, 46, 63) !important;
+}
+.Income_Expense_comp:hover .edit_income_button{
+  background-color: rgb(34, 180, 238);
+  border: rgb(1, 60, 83) solid 2px;
+}
+
+.setIncome_input_el{
+  width: 50%;
+  margin-top: 5px;
+}
+.save_income_button{
+  position: absolute;
+  height: 2.5vw;
+  width: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4CAF50;
+  border: none;
+  transition: 0.3s;
+
+  & img{
+    height: 65%;
+  }
+  &:hover{
+    transform: scale(0.9);
+  }
+}
+.cancel_income_button{
+  position: absolute;
+  height: 2.5vw;
+  width: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.6vw;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1.6vw;
+  transition: 0.3s;
+
+  & img{
+    height: 65%;
+  }
+
+  &:hover{
+    transform: scale(0.9);
+  }
+}
+/* ///////////////////// History Component ///////////////////// */
+.history_component{
+  height: 25%;
+  margin-top: 5%;
+}
+.history_header{
+  width: 85%;
+  margin: auto;
+  height: 18%;
+  font-weight: 500;
+  border-bottom: solid 2.5px rgba(202, 197, 197, 0.87);
+  
+}
+/* ///////////////// Transactions Component /////////////// */
+.transactions_box{
+  width: 100%;
+  margin: auto;
+  max-height: 70%;
+  margin-top: 4%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.transaction_component{
+  width: 98%;
+  height: 25%;
+  display: flex;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.transaction_details_box{
+  display: flex;
+  justify-content: space-between;
+  width: 94.5%;
+  padding-left: 2%;
+  background-color: white;
+  box-shadow: 0 0 3px 0.5px rgb(141, 140, 140);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 1%;
+}
+
+.transaction_component:hover .del_transaction{
+  background-color: rgb(238, 63, 63);
+  color: white;
+  transition: 0.5s;
+}
+
+.transaction_value_color_box{
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+}
+.transaction_color_box{
+  width: 0.4rem;
+  height: 100%;
+}
+.deposit{
+  background-color: rgb(57, 199, 57);
+}
+.withdraw{
+  background-color: rgb(238, 63, 63);
+}
+.del_transaction{
+  width: 5%;
+  height: 100%;
+  border: none;
+  color: black;
+  /* display: none; */
+}
+.invisible_btn{
+  background-color: rgba(255, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+.edit_transaction_btn{
+  height: 1.6vw;
+  border: none;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > img{
+    height: 65%;
+    visibility: hidden;
+  }
+}
+.transaction_component:hover .edit_transaction_btn{
+  background-color: rgb(76, 186, 230);
+  color: white;
+  transition: 0.5s;
+
+  & > img{
+    visibility: visible;
+  }
+}
+/* //////////////////////// Add New Transaction Component //////////////// */
+.newTransaction_component{
+  width: 85%;
+  margin: auto;
+  height: 31%;
+  margin-top: 4%;
+}
+.newTransaction_header{
+  width: 100%;
+  height: 14%;
+  font-weight: 500;
+  border-bottom: solid 2.5px rgba(202, 197, 197, 0.87);
+}
+.newTransaction_form{
+  width: 100%;
+  height: 85%;
+  margin-top: 3%;
+}
+.form p{
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+.transaction_description{
+  margin-bottom: 2%;
+}
+.form input{
+  width: 100%;
+  height: 1.5rem;
+  border: none;
+  border: solid rgb(218, 215, 215) 1px;
+  padding-left: 2%;
+}
+.form input:focus{
+  outline: none;
+}
+form input::placeholder{
+  font-size: 0.7rem;
+}
+.addTransaction_btn{
+  height: 1.8rem;
+  width: 100%;
+  margin-top: 2.5%;
+  border: none;
+  background-color: rgb(106, 106, 221);
+  box-shadow: 0 0 1px 0.5px rgb(141, 140, 140);
+  color: white;
+}
+/* /////////////////////  Table Component  //////////////////////// */
+.table_component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+
+}
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-bottom: 1%;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #4CAF50;
+  color: white; 
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #e6e3e3 !important;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+/* ///////////////////////   Pagination  Component   //////////////////// */
+.pageBtn{
+   background-color: #e7e7e7;
+   border: none;
+   height: 30px;
+   width: 30px;
+   margin: 5px;
+   position: sticky;
+   border-radius: 5px;
+}
+.next_btn{
+  background-color: #373837;
+  height: 30px;
+  border: none;
+  color: white;
+  margin-left: 20px;
+}
+.prev_btn{
+  background-color: #373837;
+  height: 30px;
+  border: none;
+  color: white;
+  margin-right: 20px;
+}
+.pageBtn:hover{
+  background-color: rgb(122, 120, 120);
+  color: white;
+}
+button{
+  cursor: pointer;
+}
+.export_btn{
+  border: none;
+  background-color: rgb(90, 89, 89);
+  margin-top: 2%;
+  color: white;
+  padding: 0.5rem;
+}
+.export_btn:hover{
+  background-color: rgb(173, 169, 169);
+}
+.active{
+  background-color: rgb(112, 111, 111);
+  color: white;
+}
+/* //////////////////////// Date Filter Tags ////////////////// */
+.dateTableHeader{
+  display: flex;
+}
+.selectMonth, .selectYear{
+  position: relative;
+  margin: 0 5px 0 5px;
+  border: none;
+  background-color: rgb(108, 219, 108);
+  color: white;
+}
+.resetTable_btn{
+  position: relative;
+  /* left: 15%; */
+  border: none;
+  background-color: rgb(108, 219, 108);
+  color: white;
+}
+.resetTable_btn:hover{
+  background-color: rgb(56, 109, 56);
+}
+
+/* //////////////// RESPONSIVENESS ///////////////////// */
+
+/* /////////////  Phones  /////////////////// */
+@media (max-width: 450px){
+  /* /////// HOME PAGE //////////// */
+  .app{
+    height: 95vh;
+    width: 83%;
+  }
+  .list_content{
+    font-size: 0.9rem;
+  }
+  .edit_transaction_btn{
+    height: 5vw;
+  }
+  .del_transaction {
+    width: 8%;
+   }
+  /* //////////  STATEMENT PAGE  ///////////// */
+  .table_component{
+    width: 150%;
+  }
+  .resetTable_btn{
+    left: 1%;
+  }
+}
+
+/* //////////////  Tablets   /////////////////// */
+@media (min-width: 451px) and (max-width: 600px){
+  /* //////////// HOME PAGE //////////// */
+  .app{
+    height: 100vh;
+    width: 67%;
+  }
+  .resetTable_btn{
+    left: 1%;
+  }
+  .edit_transaction_btn{
+    height: 2vw;
+  }
+}
+/* //////////////  Bigger Tablets  /////////////////// */
+@media (min-width: 601px) and (max-width: 840px){
+  /* //////////// HOME PAGE //////////// */
+  .app{
+    height: 104vh;
+    width: 57%;
+    margin-top: 2%;
+  }
+  .resetTable_btn{
+    left: 1%;
+  }
+  .Income_Expense_comp {
+    height: 8%;
+  }
+  .edit_transaction_btn{
+    height: 2.5vw;
+  }
+}
+@media (min-width: 841px) and (max-width: 1000px){
+  /* //////////// HOME PAGE //////////// */
+  .app{
+    height: 104vh;
+    width: 57%;
+    margin-top: 2%;
+  }
+  .resetTable_btn{
+    left: 1%;
+  }
+  .edit_transaction_btn{
+    height: 2.5vw;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1300px){
+  .resetTable_btn{
+    left: 1%;
+  }
+  .edit_transaction_btn{
+    height: 2vw;
+  }
+  .del_transaction {
+    width: 8%;
+  }
+}
+
+/* ////////////////////  LANDSCAPE MODE QUERIES  ///////////////// */
+@media (max-height: 400px) and (orientation: landscape){
+  .app_component{
+    height: 150vh;
+  }
+  .Income_Expense_comp {
+    height: 21%;
+  }
+  .edit_transaction_btn{
+    height: 3vw;
+  }
+  .del_transaction {
+    width: 7%;
+  }
+}
