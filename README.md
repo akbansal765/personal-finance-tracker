@@ -14,6 +14,7 @@ npm run dev
 
 cd backend
 npm install
+create .env file (I have shared a env file on the internshala platform)
 npm start
 
 
